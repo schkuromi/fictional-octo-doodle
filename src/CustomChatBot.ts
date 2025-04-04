@@ -2,7 +2,7 @@ import { inject, injectable } from "tsyringe";
 
 import { IDialogueChatBot } from "@spt/helpers/Dialogue/IDialogueChatBot";
 import { ISendMessageRequest } from "@spt/models/eft/dialog/ISendMessageRequest";
-import { IUserDialogInfo } from "@spt/models/eft/profile/IAkiProfile";
+import { IUserDialogInfo } from "@spt/models/eft/profile/IUserDialogInfo";
 import { MemberCategory } from "@spt/models/enums/MemberCategory";
 import { MailSendService } from "@spt/services/MailSendService";
 
@@ -18,14 +18,15 @@ export class CustomChatBot implements IDialogueChatBot
     public getChatBot(): IUserDialogInfo
     {
         return {
-            _id: "modderBuddy",
-            aid: 9999999,
+            _id: "67ef84ce62cf8a878c2281ff",
+            aid: 67842477094416,
             Info: {
-                Level: 1,
-                MemberCategory: MemberCategory.SHERPA,
-                Nickname: "Buddy",
-                Side: "Usec",
-            },
+                Level: 70,
+                SelectedMemberCategory: MemberCategory.TRADER,
+                MemberCategory: MemberCategory.TRADER,
+                Nickname: "Pal",
+                Side: "Usec"
+            }
         };
     }
 
@@ -34,7 +35,7 @@ export class CustomChatBot implements IDialogueChatBot
         this.mailSendService.sendUserMessageToPlayer(
             sessionId,
             this.getChatBot(),
-            `Im buddy! I just reply back what you typed to me!:\n${request.text}`,
+            `Im buddy! I just reply back what you typed to me!:\n${request.text}`
         );
         return request.dialogId;
     }

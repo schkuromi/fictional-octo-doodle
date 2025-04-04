@@ -1,5 +1,5 @@
 {
-    "name": "CustomChatBot",
+    "name": "fictional-octo-doodle",
     "version": "1.0.0",
     "sptVersion": "~3.11",
     "loadBefore": [],
@@ -24,7 +24,7 @@
         "typescript": "5.8",
         "winston": "3.12"
     },
-    "author": "clodan",
+    "author": "schkuromi",
     "contributors": [],
     "license": "MIT"
 }
